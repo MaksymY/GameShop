@@ -1,0 +1,26 @@
+.pageNotFound {
+    display: flex;
+    justify-content: center;
+}
+
+.pageNotFound-content {
+    background-color: $el;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10em;
+    border-radius: 30px;
+    width: 70%;
+
+    &__image {
+        width: 400px;
+        margin-right: 5em;
+    }
+
+    &__message {
+        text-align: center;
+        color: $text;
+        font-weight: bold;
+        font-size: 72px;
+    }
+}

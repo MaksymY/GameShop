@@ -3,9 +3,21 @@
 <body>
     <%- include('includes/navigation.ejs') %>
     <main class="shop">
+    <% if(prods.length > 0) { %>
+        <div class="shop__content">
+            <% for(let product of prods) { %>
+                <article class="shop__card">
+                    <img class="shop__card-image" src="/img/game-console.svg" />
+                    <p class="shop__card-title"><%= product.game %></p>
+                    <p class="shop__card-price"><%= product.price %>$</p>
+                </article>
+            <% } %>
+        </div>
+    <% } else { %>
         <div class="no-product">
             <img class="no-product__image" src="/img/ghost.svg">
             <p class="no-product__text">Sorry we dont have game for the moment</p>
         </div>
+    <% } %>
     </main>
 <%- include('includes/end.ejs') %>

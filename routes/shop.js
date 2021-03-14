@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
+const Allproducts = require('./admin');
+
 router.get('/', (req, res) => {
-    res.render('index.ejs', {TitlePage: 'Shop'})
+    const products = Allproducts.products;
+    res.render('index.ejs', {TitlePage: 'Shop', prods: products})
 })
 
 module.exports = router;

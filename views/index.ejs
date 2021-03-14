@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title><%= TitlePage %></title>
+<%- include('includes/head.ejs') %>
 </head>
 <body>
-    <nav class="nav">
-        <ul class="nav-content">
-            <li class="nav-content__item-logo">
-                <a href="/">
-                    <img class="nav-content__item-icon" src="/img/game-controller.svg">
-                </a>
-            </li>
-            <li class="nav-content__item">
-                <a href="/">Shop</a>
-            </li>
-            <li class="nav-content__item">
-                <a href="/admin">Admin</a>
-            </li>
-        </ul>
-    </nav>
+    <%- include('includes/navigation.ejs') %>
     <main class="shop">
         <div class="no-product">
             <img class="no-product__image" src="/img/ghost.svg">
             <p class="no-product__text">Sorry we dont have game for the moment</p>
         </div>
     </main>
-</body>
-</html>
+<%- include('includes/end.ejs') %>

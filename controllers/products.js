@@ -1,7 +1,7 @@
 const Product = require('../models/product');
 
 exports.getAdmin = (req, res) => {
-    res.render('admin.ejs', {
+    res.render('admin', {
         TitlePage: 'Admin',
         path:"/admin"
     });
@@ -14,10 +14,11 @@ exports.postAdmin = (req, res) => {
 }
 
 exports.getProducts = (req, res) => {
-    const products = Product.fetchAll();
-    res.render('index.ejs', {
-        TitlePage: 'Shop',
-        prods: products,
-        path: "/"
+    Product.fetchAll(products => {
+        res.render('index', {
+            prods: products,
+            TitlePage: 'Shop',
+            path: '/',
+        });
     });
 }
